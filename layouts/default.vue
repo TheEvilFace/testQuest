@@ -58,11 +58,6 @@
 <script>
 import localStorage from 'reactive-localstorage';
 export default {
-  asyncData(){
-    if (!JSON.parse(localStorage.getItem('cart'))){
-      localStorage.setItem('cart',JSON.stringify([]));
-    }
-  },
   data() {
     return {
       width: '0',
