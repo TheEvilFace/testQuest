@@ -1,0 +1,32 @@
+{
+  "Cart": {
+    "description": "Auto imported from components/Cart.vue"
+  },
+  "LazyCart": {
+    "description": "Auto imported from components/Cart.vue"
+  },
+  "DropIcon": {
+    "description": "Auto imported from components/DropIcon.vue"
+  },
+  "LazyDropIcon": {
+    "description": "Auto imported from components/DropIcon.vue"
+  },
+  "Logo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "LazyLogo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "Star": {
+    "description": "Auto imported from components/Star.vue"
+  },
+  "LazyStar": {
+    "description": "Auto imported from components/Star.vue"
+  },
+  "Trash": {
+    "description": "Auto imported from components/Trash.vue"
+  },
+  "LazyTrash": {
+    "description": "Auto imported from components/Trash.vue"
+  }
+}
