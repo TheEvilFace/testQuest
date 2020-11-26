@@ -50,6 +50,9 @@ export default {
     const products = await $axios.$get('https://frontend-test.idaproject.com/api/product',{params: {category:1}});
     const categories = await $axios.$get('https://frontend-test.idaproject.com/api/product-category');
     const activeItem = categories[0].name;
+    if(!localStorage.getItem('cart')){
+      localStorage.setItem('cart',JSON.stringify([]));
+    }
     return {products,categories,activeItem};
   },
   data () {
