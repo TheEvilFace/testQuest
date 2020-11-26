@@ -82,8 +82,14 @@ export default {
   },
   methods: {
     sendQuery(){
-      this.success = true;
-      localStorage.setItem('cart', JSON.stringify([]));
+      if (this.form.name === '' || this.form.phone === '' || this.form.address === ''){
+        alert('Заполните все поля!')
+      }else {
+        this.success = true;
+        this.form.name = this.form.phone = this.form.address = '';
+        localStorage.setItem('cart', JSON.stringify([]));
+      }
+
     },
     loadData(){
       this.myCarts = JSON.parse(localStorage.getItem('cart'));

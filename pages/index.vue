@@ -28,8 +28,8 @@
               <Star />
               <p>4.5</p>
             </div>
-            <a href="javascript:void(0)" @click="addToCart(product)">
-              <Cart class="icon-grey-light cartInCard" />
+            <a href="javascript:void(0)" @click="addToCart(product, $event)">
+              <Cart :class="[isInCart(product.id) ? 'icon-grey': 'icon-grey-light'] " class="cartInCard " />
             </a>
 
             <img :src="'https://frontend-test.idaproject.com'+product.photo" alt="Avatar" style="width:100%">
@@ -62,7 +62,18 @@ export default {
     }
   },
   methods:{
-    addToCart(product){
+    isInCart(id){
+      return this.$verify_cache(id)
+    },
+    addToCart(product, event){
+
+      if(this.isInCart(product.id)){
+       event.target.classList.remove('icon-grey');
+       event.target.classList.add('icon-grey-light');
+      } else {
+       event.target.classList.add('icon-grey');
+       event.target.classList.remove('icon-grey-light');
+      }
       this.$addProduct(product);
     },
     setActive(item,index){

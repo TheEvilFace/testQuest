@@ -8,7 +8,6 @@ import NuxtBuildIndicator from './components/nuxt-build-indicator'
 import '..\\styles\\style.scss'
 
 import _6f6c098b from '..\\layouts\\default.vue'
-import localStorage from "reactive-localstorage";
 
 const layouts = { "_default": sanitizeComponent(_6f6c098b) }
 
@@ -63,9 +62,6 @@ export default {
     Vue.util.defineReactive(this, 'nuxt', this.$options.nuxt)
   },
   created () {
-    if(!localStorage.getItem('cart')){
-      localStorage.setItem('cart',JSON.stringify([]));
-    }
     // Add this.$nuxt in child instances
     this.$root.$options.$nuxt = this
 
